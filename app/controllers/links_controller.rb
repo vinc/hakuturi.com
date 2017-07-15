@@ -3,7 +3,9 @@ class LinksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
 
   def index
-    @links = Link.all.order(created_at: :desc)
+    page = (params[:page] || "1").to_i
+    limit = (params[:limit] || "10").to_i
+    @links = Link.all.order(created_at: :desc).page(page).per(limit)
   end
 
   def show

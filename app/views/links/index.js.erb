@@ -1,0 +1,9 @@
+// Append new data
+$("<%=j render(partial: "links/links", :object => @links) %>").appendTo($('#links'));
+
+// Update next-page link
+<% if @links.last_page? %>
+  $('.next-page').html('');
+<% else %>
+  $('.next-page').html("<%=j link_to_next_page @links, "Next Page", remote: true, class: "btn btn-secondary", role: "button" %>");
+<% end %>

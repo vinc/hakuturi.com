@@ -1,9 +1,17 @@
-<h1 class="text-center text-primary">Latest News</h1>
+<h1 class="text-center"><%= link_to "Latest News", root_path %></h1>
 
 <% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
 <% end %>
 
-<% @links.each do |link| %>
-  <%= render "link", link: link %>
+<% if @links %>
+  <div id="links">
+    <%= render "links", links: @links %>
+  </div>
+
+  <% unless @links.last_page? %>
+    <div class="next-page text-center mt-4">
+      <%= link_to_next_page @links, "Next Page", remote: true, class: "btn btn-secondary", role: "button" %>
+    </div>
+  <% end %>
 <% end %>
