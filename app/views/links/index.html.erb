@@ -1,6 +1,6 @@
 <h1 class="text-center text-primary">Latest News</h1>
 
-<% if user_signed_in? %>
+<% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
 <% end %>
 
