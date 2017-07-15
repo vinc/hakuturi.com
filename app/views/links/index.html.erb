@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <h1 class="text-center text-primary">Latest News</h1>
 
-<%= link_to 'New Link', new_link_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Link', new_link_path %>
+<% end %>
 
 <% @links.each do |link| %>
   <%= render 'link', link: link %>
