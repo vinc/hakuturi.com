@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">
+    <%= link_to "domain", link.url %>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title"><%= link_to link.title, link.url %></h4>
+
+    <%= simple_format link.body, class: "card-text" %>
+  </div>
+</div>

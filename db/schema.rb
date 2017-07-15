@@ -15,10 +15,9 @@ ActiveRecord::Schema.define(version: 20170711060123) do
   create_table "links", force: :cascade do |t|
     t.string "title"
     t.string "url"
-    t.integer "note_id"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["note_id"], name: "index_links_on_note_id"
   end
 
   create_table "notes", force: :cascade do |t|

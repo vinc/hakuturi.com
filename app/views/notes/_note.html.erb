@@ -1,11 +1,7 @@
-<article>
-  <h2><%= note.title %></h2>
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title"><%= note.title %></h4>
 
-  <%= simple_format note.body %>
-
-  <p>
-    <% note.links.each do |link| %>
-      <%= link_to link.title, link.url %>
-    <% end %>
-  </p>
-</article>
+    <%= simple_format note.body, class: "card-text" %>
+  </div>
+</div>
