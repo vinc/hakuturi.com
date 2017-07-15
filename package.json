@@ -1,6 +1,7 @@
 {
   "name": "MultiPost",
   "private": true,
+  "postinstall": "npm rebuild node-sass",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6"
   }
