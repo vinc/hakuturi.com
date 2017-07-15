@@ -14,4 +14,11 @@
  *= require_self
  */
 
+$brand-primary: #0A7;
+
 @import "bootstrap/scss/bootstrap";
+
+body > .container {
+  width: 100%;
+  max-width: 44em;
+}

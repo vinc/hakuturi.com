@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Links</h1>
+<h1 class="text-center text-primary">Latest News</h1>
+
+<%= link_to 'New Link', new_link_path %>
 
 <% @links.each do |link| %>
   <%= render 'link', link: link %>
 <% end %>
-
-<br>
-
-<%= link_to 'New Link', new_link_path %>
