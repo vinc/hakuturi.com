@@ -1,4 +1,4 @@
-<h1 class="text-center"><%= link_to "Latest News", root_path %></h1>
+<h1 class="text-center"><%= link_to "Environment News", root_path %></h1>
 
 <% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
@@ -10,7 +10,7 @@
   </div>
 
   <% unless @links.last_page? %>
-    <div class="next-page text-center mt-4">
+    <div class="next-page text-center mt-3">
       <%= link_to_next_page @links, "Next Page", remote: true, class: "btn btn-secondary", role: "button" %>
     </div>
   <% end %>
