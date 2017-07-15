@@ -1,9 +1,6 @@
 {
   "name": "MultiPost",
   "private": true,
-  "scripts": {
-    "postinstall": "npm rebuild node-sass"
-  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
