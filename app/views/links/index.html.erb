@@ -1,9 +1,9 @@
 <h1 class="text-center text-primary">Latest News</h1>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Link', new_link_path %>
+  <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
 <% end %>
 
 <% @links.each do |link| %>
-  <%= render 'link', link: link %>
+  <%= render "link", link: link %>
 <% end %>
