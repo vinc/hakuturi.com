@@ -1,7 +1,5 @@
 <% content_for(:title, "Earth News") %>
 
-<h1 class="text-center"><%= link_to content_for(:title), root_path %></h1>
-
 <% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
 <% end %>
