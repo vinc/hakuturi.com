@@ -51,7 +51,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'devise-bootstrap-views'
+gem 'devise-bootstrap-views', '~> 1.0.0.alpha1'
 gem 'pundit'
 gem 'kaminari'
 gem 'webpacker'

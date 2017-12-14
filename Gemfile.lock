@@ -51,7 +51,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    devise-bootstrap-views (0.0.11)
+    devise-bootstrap-views (1.0.0.alpha1)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -186,7 +186,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   devise
-  devise-bootstrap-views
+  devise-bootstrap-views (~> 1.0.0.alpha1)
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)
