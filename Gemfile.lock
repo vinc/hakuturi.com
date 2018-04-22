@@ -83,6 +83,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    meta-tags (2.9.0)
+      actionpack (>= 3.2.0, < 5.3)
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -190,6 +192,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)
+  meta-tags
   pg (~> 0.21)
   puma (~> 3.11)
   pundit
