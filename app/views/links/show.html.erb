@@ -1,1 +1,3 @@
-<%= render 'link', link: @link %>
+<% content_for(:title, @link.title) %>
+
+<%= render "link", link: @link %>
