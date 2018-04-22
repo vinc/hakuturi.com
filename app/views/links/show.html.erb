@@ -1,3 +1,7 @@
 <% content_for(:title, @link.title) %>
 
 <%= render "link", link: @link %>
+
+<div class="text-center mt-3">
+  <%= link_to "More News", links_path, class: "btn btn-secondary", role: "button" %>
+</div>
