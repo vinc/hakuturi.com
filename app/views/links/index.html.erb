@@ -1,5 +1,3 @@
-<% content_for(:title, "Hakituri News") %>
-
 <% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
 <% end %>
