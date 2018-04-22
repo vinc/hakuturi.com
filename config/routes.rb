@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :links
+  resources :links, path: "news"
   resources :notes
 
-  root to: "links#index"
+  root to: redirect("/news")
 end
