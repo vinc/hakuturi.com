@@ -5,7 +5,9 @@
         <%= link.host %>
       </div>
       <div class="col text-right">
-        <%= time_tag(link.created_at, time_ago_in_words(link.created_at)) %> ago
+        <%= link_to(link, class: "text-muted") do %>
+          <%= time_tag(link.created_at, time_ago_in_words(link.created_at)) %> ago
+        <% end %>
       </div>
     </div>
   </div>
