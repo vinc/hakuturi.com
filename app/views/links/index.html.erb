@@ -1,4 +1,6 @@
-<% description "Hakituri News is a curated news aggregator focused on the environment" %>
+<h1 class="text-center display-4"><%= link_to 'Hākuturi News', links_path %></h1>
+
+<% description "Hākuturi News is a curated news aggregator focused on the environment" %>
 
 <% if policy(@links).create? %>
   <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
