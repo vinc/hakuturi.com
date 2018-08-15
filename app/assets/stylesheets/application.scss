@@ -15,8 +15,12 @@
  *= require_self
  */
 
-$brand-primary: #0A5;
+$primary: #0A5;
+$body-color: #333;
+$font-family-base: "Roboto Slab", serif;
+$font-size-base: 1.1rem;
 
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500");
 @import "bootstrap/scss/bootstrap";
 
 html {
@@ -25,27 +29,35 @@ html {
 }
 
 body {
-  background: #fffc;
+  background: rgba($primary, 0.5);
   min-height: 100vh;
 
-  > .container {
+}
+
+header h1 {
+  &, a {
+    color: rgba(white, 0.9);
+  }
+  a:focus, a:hover {
+    color: rgba(white, 1.0);
+    text-decoration: none;
+  }
+}
+
+main {
+  background: white;
+  box-shadow: 0 0 1rem rgba(black, 0.25);
+
+  .container {
     width: 100%;
     max-width: 44em;
   }
 }
 
-h1 {
-  text-shadow: 0 2px 4px rgba(darken($brand-primary, 40%), 0.1);
-}
-
 .card {
   box-shadow: 0px 3px 3px #1111;
-  background-color: transparent;
+}
 
-  .card-header {
-    background-color: rgba(lighten($brand-primary, 60%), 0.8);
-  }
-  .card-block {
-    background-color: #fff;
-  }
+.card + .card {
+  margin-top: map-get($spacers, 4);
 }

@@ -1,10 +1,13 @@
-<h1 class="text-center display-4"><%= link_to 'Hākuturi News', links_path %></h1>
+<%= content_for :header_title do %>
+  <%= link_to "Hākuturi", root_path %>
+  <span class="text-white-50">/<span>&nbsp;<%= link_to "News", links_path %>
+<% end %>
 
 <% title @link.title %>
 <% description @link.body %>
 
 <%= render "link", link: @link %>
 
-<div class="text-center mt-3">
-  <%= link_to "More News", links_path, class: "btn btn-secondary", role: "button" %>
+<div class="text-center mt-4">
+  <%= link_to "More News", links_path, class: "btn btn-primary", role: "button" %>
 </div>

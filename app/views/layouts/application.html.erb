@@ -6,22 +6,28 @@
     <%= page_meta_tags %>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
-  <body>
-    <%# render 'layouts/navbar' %>
+  <body class="d-flex flex-column">
+    <header class="p-4">
+      <h1 class="text-center display-4 m-0">
+        <%= content_for :header_title %>
+      </h1>
+    </header>
 
-    <div class="container py-3">
-      <% if alert %>
-        <div class="alert alert-danger" role="alert"><%= alert %></div>
-      <% end %>
-      <% if notice %>
-        <div class="alert alert-success" role="alert"><%= notice %></div>
-      <% end %>
+    <main class="flex-grow-1">
+      <div class="container p-4">
+        <% if alert %>
+          <div class="alert alert-danger" role="alert"><%= alert %></div>
+        <% end %>
+        <% if notice %>
+          <div class="alert alert-success" role="alert"><%= notice %></div>
+        <% end %>
 
-      <%= yield %>
-    </div>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

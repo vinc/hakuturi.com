@@ -2,6 +2,10 @@ class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
 
+  before_action do
+    set_meta_tags site: "Hākuturi News"
+  end
+
   def index
     page = (params[:page] || "1").to_i
     limit = (params[:limit] || "10").to_i

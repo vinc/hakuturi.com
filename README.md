@@ -1,4 +1,5 @@
 Hākuturi News
 =============
 
-Hākuturi News is a curated news aggregator focused on the environment.
+[Hākuturi News](https://hakuturi.com/news) is a curated news aggregator focused
+on the environment.

@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :links, path: "news"
   resources :notes
 
-  root to: redirect("/news")
+  root "home#index" # to: redirect("/news")
 end

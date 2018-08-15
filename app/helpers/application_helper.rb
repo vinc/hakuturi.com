@@ -1,7 +1,7 @@
 module ApplicationHelper
   def page_meta_tags
     display_meta_tags(
-      site: "Hākuturi News",
+      site: "Hākuturi",
       separator: "-",
       reverse: true,
       canonical: url_for(only_path: false, locale: nil),
