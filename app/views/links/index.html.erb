@@ -1,12 +1,11 @@
-<%= content_for :header_title do %>
-  <%= link_to "Hākuturi", root_path %>
-  <span class="text-white-50">/<span>&nbsp;<%= link_to "News", links_path %>
-<% end %>
+<%= render "header" %>
 
 <% description "Hākuturi News is a curated news aggregator focused on the environment" %>
 
 <% if policy(@links).create? %>
-  <%= link_to "New Link", new_link_path, class: "btn btn-secondary", role: "button" %>
+  <div class="text-center mb-4">
+    <%= link_to "Add News", new_link_path, class: "btn btn-primary", role: "button" %>
+  </div>
 <% end %>
 
 <% if @links %>

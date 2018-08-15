@@ -44,3 +44,8 @@ en:
           thousand: "k"
           million: "m"
           billion: "b"
+
+  helpers:
+    submit:
+      create: "Create"
+      update: "Update"

@@ -1,7 +1,4 @@
-<%= content_for :header_title do %>
-  <%= link_to "Hākuturi", root_path %>
-  <span class="text-white-50">/<span>&nbsp;<%= link_to "News", links_path %>
-<% end %>
+<%= render "header" %>
 
 <% title @link.title %>
 <% description @link.body %>

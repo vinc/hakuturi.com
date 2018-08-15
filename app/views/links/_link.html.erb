@@ -20,9 +20,9 @@
 
     <% if policy(link).update? %>
       <div class="mt-3">
-        <a href="http://twitter.com/share?url=<%=u link.url %>&text=<%=u link.title %>" target="_blank" class="btn btn-secondary float-right ml-2" role="button">Tweet</a>
+        <a href="http://twitter.com/share?url=<%=u link.url %>&text=<%=u link.title %>" target="_blank" class="btn btn-primary float-right ml-2" role="button">Tweet</a>
 
-        <%= link_to "Edit", edit_link_path(link), class: "btn btn-secondary", role: "button" %>
+        <%= link_to "Edit", edit_link_path(link), class: "btn btn-primary", role: "button" %>
         <%= link_to "Delete", link_path(link), class: "btn btn-outline-danger ml-2", role: "button", data: { confirm: "Are you sure?" }, method: :delete %>
       </div>
     <% end %>
