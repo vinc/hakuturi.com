@@ -5,5 +5,5 @@ $("<%=j render(partial: "links/links", :object => @links) %>").appendTo($('#link
 <% if @links.last_page? %>
   $('.next-page').html('');
 <% else %>
-  $('.next-page').html("<%=j link_to_next_page @links, "Next Page", remote: true, class: "btn btn-secondary", role: "button" %>");
+  $('.next-page').html("<%=j link_to_next_page @links, "Next Page", remote: true, class: "btn btn-primary", role: "button" %>");
 <% end %>
