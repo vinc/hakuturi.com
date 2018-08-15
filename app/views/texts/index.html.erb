@@ -1,0 +1,21 @@
+<%= render "header" %>
+
+<% description "Hākuturi Texts is collection of resources to understand our modern societies" %>
+
+<% if policy(@texts).create? %>
+  <div class="text-center mb-4">
+    <%= link_to "Add Text", new_text_path, class: "btn btn-primary", role: "button" %>
+  </div>
+<% end %>
+
+<% if @texts %>
+  <ul id="texts">
+    <%= render "texts", texts: @texts %>
+  </ul>
+
+  <% unless @texts.last_page? %>
+    <div class="next-page text-center mt-4">
+      <%= link_to_next_page @texts, "Next Page", remote: true, class: "btn btn-primary", role: "button" %>
+    </div>
+  <% end %>
+<% end %>

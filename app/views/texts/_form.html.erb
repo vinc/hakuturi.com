@@ -1,0 +1,37 @@
+<%= form_with(model: text, local: true) do |form| %>
+  <% if text.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(text.errors.count, "error") %> prohibited this text from being saved:</h2>
+
+      <ul>
+      <% text.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :text_title, class: "form-control", placeholder: "title of the text" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :text_author, class: "form-control", placeholder: "author of the text" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :text_body, class: "form-control", style: "height:15rem", placeholder: "body of the text" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :published_on %>
+    <%= form.date_field :published_on, id: :text_published_on, class: "form-control", placeholder: "YYYY-MM-DD" %>
+  </div>
+
+  <div class="mt-4">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

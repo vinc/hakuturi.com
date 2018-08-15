@@ -34,7 +34,7 @@ body {
 
 }
 
-header h1 {
+body > header h1 {
   &, a {
     color: rgba(white, 0.9);
   }
@@ -50,7 +50,7 @@ main {
 
   .container {
     width: 100%;
-    max-width: 44em;
+    max-width: 40rem;
   }
 }
 

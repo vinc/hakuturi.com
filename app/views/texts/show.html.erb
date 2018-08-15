@@ -1,0 +1,21 @@
+<%= render "header" %>
+
+<header>
+  <h1 class="text-center mb-4"><%= title @text.title %></h1>
+  <h3 class="text-center text-muted mb-4">(<%= @text.author %>, <%= @text.published_on.year %>)</h3>
+</header>
+
+<% if policy(@text).update? %>
+  <div class="mb-4">
+    <%= link_to "Edit", edit_text_path(@text), class: "btn btn-primary", role: "button" %>
+    <%= link_to "Delete", text_path(@text), class: "btn btn-outline-danger ml-2", role: "button", data: { confirm: "Are you sure?" }, method: :delete %>
+  </div>
+<% end %>
+
+<article>
+  <%= markdown_format @text.body %>
+</article>
+
+<div class="text-center mt-4">
+  <%= link_to "More Texts", texts_path, class: "btn btn-primary", role: "button" %>
+</div>
