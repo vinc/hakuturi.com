@@ -1,0 +1,48 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - node_modules/**/*
+    - db/schema.rb
+
+Documentation:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Max: 30
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'config/environments/*.rb'
+    - 'config/routes.rb'
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FormatString:
+  EnforcedStyle: sprintf
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+
+ClassAndModuleChildren:
+  Enabled: false
