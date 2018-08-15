@@ -34,19 +34,22 @@ body {
 
 }
 
-body > header h1 {
-  &, a {
-    color: rgba(white, 0.9);
-  }
-  a:focus, a:hover {
-    color: rgba(white, 1.0);
-    text-decoration: none;
+body > header {
+  box-shadow: inset 0 0 2rem rgba(black, 0.5);
+
+  h1 {
+    &, a {
+      color: rgba(white, 0.9);
+    }
+    a:focus, a:hover {
+      color: rgba(white, 1.0);
+      text-decoration: none;
+    }
   }
 }
 
 main {
   background: white;
-  box-shadow: 0 0 1rem rgba(black, 0.25);
 
   .container {
     width: 100%;
