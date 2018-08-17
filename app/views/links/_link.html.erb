@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="card-body">
-    <h4 class="card-title mb-0"><%= link_to link.title, link.url %></h4>
+    <h5 class="card-title mb-0"><%= link_to link.title, link.url %></h5>
 
     <% if link.body.present? %>
       <%= simple_format link.body, class: "card-text mt-3 mb-0" %>
