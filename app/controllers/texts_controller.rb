@@ -8,7 +8,7 @@ class TextsController < ApplicationController
 
   def index
     page = (params[:page] || "1").to_i
-    limit = (params[:limit] || "10").to_i
+    limit = (params[:limit] || "20").to_i
     @texts = Text.all.order(published_on: :desc).page(page).per(limit)
   end
 
