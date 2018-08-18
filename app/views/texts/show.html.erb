@@ -16,6 +16,12 @@
   <%= markdown_format @text.body %>
 </article>
 
+<% if @text.source.present? %>
+  <div class="alert alert-secondary mt-4" role="alert">
+    <%= markdown_format @text.source %>
+  </div>
+<% end %>
+
 <div class="text-center mt-4">
   <%= link_to "More Texts", texts_path, class: "btn btn-primary", role: "button" %>
 </div>

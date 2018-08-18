@@ -64,3 +64,9 @@ main {
 .card + .card {
   margin-top: map-get($spacers, 4);
 }
+
+.alert {
+  p {
+    margin-bottom: 0;
+  }
+}

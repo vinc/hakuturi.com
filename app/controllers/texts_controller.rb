@@ -68,6 +68,6 @@ class TextsController < ApplicationController
   end
 
   def text_params
-    params.require(:text).permit(:title, :author, :body, :published_on)
+    params.require(:text).permit(:title, :author, :body, :source, :published_on)
   end
 end
