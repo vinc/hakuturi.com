@@ -2,7 +2,7 @@
 
 <header>
   <h1 class="text-center mb-4"><%= title @text.title %></h1>
-  <p class="h3 text-center text-muted mb-4">(<%= @text.author %>, <%= @text.published_on.year %>)</p>
+  <p class="h3 text-center text-muted mb-4"><%= @text.author %> (<%= @text.published_on.year %>)</p>
 </header>
 
 <% if policy(@text).update? %>

@@ -1,6 +1,6 @@
 <% texts.each do |text| %>
   <li>
     <%= link_to "#{text.title}", text %>
-    <span class="text-muted">(<%= text.author %>, <%= text.published_on.year %>)</span>
+    <span class="text-muted"> - <%= text.author %> (<%= text.published_on.year %>)</span>
   </li>
 <% end %>
