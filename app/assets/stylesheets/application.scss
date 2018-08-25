@@ -47,11 +47,21 @@ body > header {
 
 main {
   background: white;
+  position: relative;
 
   .container {
     width: 100%;
     max-width: 40rem;
   }
+
+  @include media-breakpoint-up(lg) {
+    .btn-toolbar-admin {
+      position: absolute;
+      top: $spacer;
+      left: $spacer;
+    }
+  }
+}
 
 blockquote {
   margin-left: $spacer;

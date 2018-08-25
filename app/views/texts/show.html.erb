@@ -6,7 +6,7 @@
 </header>
 
 <% if policy(@text).update? %>
-  <div class="mb-4">
+  <div class="btn-toolbar-admin mb-4">
     <%= link_to "Edit", edit_text_path(@text), class: "btn btn-primary", role: "button" %>
     <%= link_to "Delete", text_path(@text), class: "btn btn-outline-danger ml-2", role: "button", data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
