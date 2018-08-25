@@ -2,13 +2,18 @@
   Hākuturi
 <% end %>
 
-<p>In Māori mythology, the hākuturi are guardians of the forest. The goal of
-this website is to help us understand the ongoing environmental crisis, and to
-promote biodiversity and wilderness preservation.</p>
+<p>
+  In Māori mythology, the hākuturi are guardians of the forest.
+</p>
+
+<p>
+  We aim to raise the awareness about the ongoing ecological crisis,
+  and to promote biodiversity and wilderness preservation.
+</p>
 
 <ul>
   <li><%= link_to "News", links_path %>: curated news aggregator focused on the environment</li>
   <% if current_user&.admin? %>
-    <li><%= link_to "Texts", texts_path %>: collection of texts to understand our modern societies</li>
+    <li><%= link_to "Texts", texts_path %>: collection of texts about social and ecological changes</li>
   <% end %>
 </ul>
