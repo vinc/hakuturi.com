@@ -52,6 +52,24 @@ main {
     width: 100%;
     max-width: 40rem;
   }
+
+blockquote {
+  margin-left: $spacer;
+  padding-left: $spacer;
+  border-left: solid 3px rgba($primary, 0.5);
+}
+
+hr {
+  border: none;
+  text-align: center;
+  line-height: 3px; // HACK
+  margin-top: calc(2rem + 2 * 3px); // HACK
+  margin-bottom: 2rem;
+  &:after {
+    color: $text-muted;
+    content: "* * *";
+    letter-spacing: $spacer / 2;
+  }
 }
 
 .card {
