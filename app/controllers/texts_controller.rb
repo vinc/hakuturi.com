@@ -30,7 +30,7 @@ class TextsController < ApplicationController
 
     respond_to do |format|
       if @text.save
-        format.html { redirect_to texts_path, notice: "Text was successfully created." }
+        format.html { redirect_to @text, notice: "Text was successfully created." }
         format.json { render :show, status: :created, location: @text }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class TextsController < ApplicationController
     authorize @text
     respond_to do |format|
       if @text.update(text_params)
-        format.html { redirect_to texts_path, notice: "Text was successfully updated." }
+        format.html { redirect_to @text, notice: "Text was successfully updated." }
         format.json { render :show, status: :ok, location: @text }
       else
         format.html { render :edit }
