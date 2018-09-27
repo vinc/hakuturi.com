@@ -31,7 +31,7 @@ group :development do
 end
 
 gem "devise"
-gem "devise-bootstrap-views", "~> 1.0.0.alpha1"
+gem "devise-bootstrap-views", "~> 1.0"
 gem "kaminari"
 gem "meta-tags"
 gem "pundit"
