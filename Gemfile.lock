@@ -65,6 +65,9 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    gepub (0.7.1)
+      nokogiri (>= 1.8.2, < 1.9)
+      rubyzip (>= 1.1.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.1.0)
@@ -165,6 +168,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
+    rubyzip (1.2.2)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -223,6 +227,7 @@ DEPENDENCIES
   byebug
   devise
   devise-bootstrap-views (~> 1.0.0.alpha1)
+  gepub
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)

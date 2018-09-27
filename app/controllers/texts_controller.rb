@@ -1,4 +1,6 @@
 class TextsController < ApplicationController
+  include TextsHelper
+
   before_action :set_text, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new edit create update destroy]
 
@@ -13,6 +15,13 @@ class TextsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.text
+      format.epub do
+        send_data(render_epub(@text), filename: "#{@text.id}.epub", type: "application/epub")
+      end
+    end
   end
 
   def new
