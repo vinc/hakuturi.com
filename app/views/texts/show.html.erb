@@ -1,8 +1,8 @@
 <%= render "header" %>
 
-<header>
-  <h1 class="text-center mb-4"><%= title @text.title %></h1>
-  <p class="h3 text-center text-muted mb-4"><%= @text.author %> (<%= @text.published_on.year %>)</p>
+<header class="pb-2">
+  <p class="h3 text-center text-muted"><%= @text.author %> (<%= @text.published_on.year %>)</p>
+  <h1 class="text-center my-3"><%= title @text.title %></h1>
 </header>
 
 <% if policy(@text).update? %>

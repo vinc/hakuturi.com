@@ -25,8 +25,8 @@ module TextsHelper
               <title>#{text.title}</title>
             </head>
             <body>
-              <h1 style="text-align:center">#{text.title}</h1>
               <h2 style="text-align:center">#{text.author} (#{text.published_on.year})</h2>
+              <h1 style="text-align:center">#{text.title}</h1>
               #{html}
             </body>
           </html>
