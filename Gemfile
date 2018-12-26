@@ -1,13 +1,10 @@
 source "https://rubygems.org"
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.5.1"
 
-gem "rails", "~> 5.2.1"
+gem "rails", "~> 5.2.2"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "jbuilder", "~> 2.5"
@@ -32,9 +29,9 @@ end
 
 gem "devise"
 gem "devise-bootstrap-views", "~> 1.0"
+gem "gepub"
 gem "kaminari"
 gem "meta-tags"
 gem "pundit"
 gem "redcarpet"
 gem "webpacker"
-gem "gepub"
