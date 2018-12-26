@@ -1,12 +1,12 @@
-<div class="card">
+<div class="card" itemscope itemtype="http://schema.org/Article">
   <div class="card-header">
     <div class="row text-muted">
-      <div class="col col-auto">
+      <div class="col col-auto" itemprop="publisher">
         <%= link.host %>
       </div>
       <div class="col text-right">
         <%= link_to(link, class: "text-muted") do %>
-          <%= time_tag(link.created_at, time_ago_in_words(link.created_at)) %>
+          <%= time_tag(link.created_at, time_ago_in_words(link.created_at), itemprop: "datePublished") %>
         <% end %>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <h5 class="card-title mb-0"><%= link_to link.title, link.url %></h5>
 
     <% if link.body.present? %>
-      <div class="card-text mt-3">
+      <div class="card-text mt-3" itemprop="headline">
         <%= markdown_format link.body %>
       </div>
     <% end %>
