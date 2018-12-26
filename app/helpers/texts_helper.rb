@@ -1,10 +1,13 @@
 module TextsHelper
-  class HTMLWithPants < Redcarpet::Render::HTML
-    include Redcarpet::Render::SmartyPants
+  class CustomRender < Redcarpet::Render::HTML
+    # include Redcarpet::Render::SmartyPants
+    def preprocess(doc)
+      doc.gsub("---", "&mdash;").gsub("--", "&ndash;")
+    end
   end
 
   def markdown_format(source)
-    markdown = Redcarpet::Markdown.new(HTMLWithPants)
+    markdown = Redcarpet::Markdown.new(CustomRender)
     markdown.render(source).html_safe
   end
 
