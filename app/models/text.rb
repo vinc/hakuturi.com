@@ -12,4 +12,8 @@
 #
 
 class Text < ApplicationRecord
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :body, presence: true
+  validates :published_on, presence: true
 end

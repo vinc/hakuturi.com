@@ -11,6 +11,9 @@
 #
 
 class Link < ApplicationRecord
+  validates :title, presence: true
+  validates :url, presence: true
+
   def host
     URI(url).host.sub("www.", "")
   end
