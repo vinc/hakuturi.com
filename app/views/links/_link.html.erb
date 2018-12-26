@@ -15,7 +15,9 @@
     <h5 class="card-title mb-0"><%= link_to link.title, link.url %></h5>
 
     <% if link.body.present? %>
-      <%= simple_format link.body, class: "card-text mt-3 mb-0" %>
+      <div class="card-text mt-3">
+        <%= markdown_format link.body %>
+      </div>
     <% end %>
 
     <% if policy(link).update? %>
