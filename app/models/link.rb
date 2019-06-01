@@ -17,4 +17,11 @@ class Link < ApplicationRecord
   def host
     URI(url).host.sub("www.", "")
   end
+
+  def crawl
+    page = MetaInspector.new(url)
+    self.title = page.best_title
+    self.body = page.description
+    self.created_at = Time.zone.now
+  end
 end

@@ -29,7 +29,10 @@ class LinksController < ApplicationController
     authorize @link
 
     respond_to do |format|
-      if @link.save
+      if @link.url.present? && params[:commit] == "Crawl"
+        @link.crawl
+        format.html { render :new }
+      elsif @link.save
         format.html { redirect_to links_path, notice: "Link was successfully created." }
         format.json { render :show, status: :created, location: @link }
       else
