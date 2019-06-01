@@ -1,4 +1,10 @@
 <%= content_for :header_title do %>
-  <%= link_to "Hākuturi", root_path %>
-  <span class="text-white-50">/<span>&nbsp;<%= link_to "Texts", texts_path %>
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    <%= link_to root_path, itemprop: "item" do %><span itemprop="name">Hākuturi</span><% end %>
+    <meta itemprop="position" content="1" />
+  </li>
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    <%= link_to texts_path, itemprop: "item" do %><span itemprop="name">Texts</span><% end %>
+    <meta itemprop="position" content="2" />
+  </li>
 <% end %>
