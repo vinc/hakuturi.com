@@ -15,6 +15,8 @@ class TextsController < ApplicationController
   end
 
   def show
+    redirect_to(@text, status: 301) if @text.to_param != params[:id]
+
     respond_to do |format|
       format.html
       format.text
@@ -73,7 +75,7 @@ class TextsController < ApplicationController
   private
 
   def set_text
-    @text = Text.find(params[:id])
+    @text = Text.find(params[:id].split("-").last)
   end
 
   def text_params

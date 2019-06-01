@@ -13,6 +13,7 @@ class LinksController < ApplicationController
   end
 
   def show
+    redirect_to(@link, status: 301) if @link.to_param != params[:id]
   end
 
   def new
@@ -67,7 +68,7 @@ class LinksController < ApplicationController
   private
 
   def set_link
-    @link = Link.find(params[:id])
+    @link = Link.find(params[:id].split("-").last)
   end
 
   def link_params

@@ -24,4 +24,8 @@ class Link < ApplicationRecord
     self.body = page.description
     self.created_at = Time.zone.now
   end
+
+  def to_param
+    [created_at.strftime("%F"), title.parameterize, id].join("-")
+  end
 end

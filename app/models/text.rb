@@ -16,4 +16,8 @@ class Text < ApplicationRecord
   validates :author, presence: true
   validates :body, presence: true
   validates :published_on, presence: true
+
+  def to_param
+    [published_on.strftime("%Y"), title.parameterize, id].join("-")
+  end
 end
