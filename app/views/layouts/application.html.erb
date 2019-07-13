@@ -12,6 +12,7 @@
 
   <body class="d-flex flex-column">
     <header class="p-4 <%= controller_name == "home" ? "flex-grow-1 d-flex justify-content-center align-items-center" : "" %>">
+      <%= video_tag("background-video.mp4", poster: "background-video.jpg", class: "background-video", playsinline: true, autoplay: true, muted: true, loop: true,) %>
       <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="text-center display-4 m-0">
         <%= content_for :header_title %>
       </ol>
