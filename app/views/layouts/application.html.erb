@@ -10,25 +10,41 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
-  <body class="d-flex flex-column">
-    <header class="p-4 <%= controller_name == "home" ? "flex-grow-1 d-flex justify-content-center align-items-center" : "" %>">
-      <%= video_tag("background-video.mp4", poster: "background-video.jpg", class: "background-video", playsinline: true, autoplay: true, muted: true, loop: true,) %>
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="text-center display-4 m-0">
-        <%= content_for :header_title %>
-      </ol>
-    </header>
+  <body class="d-flex flex-column <%= controller_name %>">
+    <% if controller_name == "home" %>
+      <header class="p-4 fullscreen d-flex flex-column text-white-90 text-shadow">
+        <%= video_tag("background-video.mp4", poster: "background-video.jpg", class: "background-video", playsinline: true, autoplay: true, muted: true, loop: true,) %>
+        <nav class="justify-self-start text-right flex-grow-1">
+          <%= link_to "News", links_path %>
+          <% if current_user&.admin? %>
+            <%= link_to "Texts", texts_path, class: "ml-3" %>
+          <% end %>
+        </nav>
 
-    <main class="flex-grow-1">
-      <div class="container p-4">
-        <% if alert %>
-          <div class="alert alert-danger" role="alert"><%= alert %></div>
-        <% end %>
-        <% if notice %>
-          <div class="alert alert-success" role="alert"><%= notice %></div>
-        <% end %>
+        <div class="container">
+          <%= content_for :header_title %>
+        </div>
+      </header>
+    <% else %>
+      <header class="p-4 text-white-90 text-shadow">
+        <%= image_tag("background-video.jpg", class: "background-video") %>
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="text-center display-4 m-0">
+          <%= content_for :header_title %>
+        </ol>
+      </header>
 
-        <%= yield %>
-      </div>
-    </main>
+      <main class="flex-grow-1">
+        <div class="container p-4">
+          <% if alert %>
+            <div class="alert alert-danger" role="alert"><%= alert %></div>
+          <% end %>
+          <% if notice %>
+            <div class="alert alert-success" role="alert"><%= notice %></div>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </main>
+    <% end %>
   </body>
 </html>

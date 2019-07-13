@@ -57,14 +57,6 @@ body > header {
       &:first-child:before {
         content: "";
       }
-
-      &, a {
-        color: rgba(white, 0.9);
-      }
-      a:focus, a:hover {
-        color: rgba(white, 1.0);
-        text-decoration: none;
-      }
     }
   }
 }
@@ -145,3 +137,33 @@ hr {
 iframe {
   max-width: 100%;
 }
+
+.lead {
+  font-weight: 400;
+}
+
+.text-white-90 {
+  &, a {
+    color: rgba(white, 0.9);
+  }
+  a:focus, a:hover {
+    color: rgba(white, 1.0);
+    text-decoration: none;
+  }
+}
+
+.text-shadow {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+/*
+body.home nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+*/
