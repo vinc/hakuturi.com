@@ -19,7 +19,16 @@ $body-color: #333;
 $font-family-base: "Roboto Slab", "Rockwell", "Bitstream Vera Serif", "Georgia", serif;
 $font-size-base: 1.1rem;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500");
+$font-weight-lighter:  300;
+$font-weight-light:    300;
+$font-weight-normal:   400;
+$font-weight-bold:     700;
+$font-weight-bolder:   700;
+
+$headings-font-weight: 400;
+$lead-font-weight:     400;
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 
@@ -136,10 +145,6 @@ hr {
 
 iframe {
   max-width: 100%;
-}
-
-.lead {
-  font-weight: 400;
 }
 
 .text-white-90 {
