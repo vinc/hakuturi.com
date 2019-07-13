@@ -8,7 +8,20 @@
   </div>
 <% end %>
 
-<% if @links %>
+<aside class="search mb-4">
+  <form action="/news" accept-charset="UTF-8" method="get">
+    <div class="input-group">
+      <input type="search" name="q" id="q" value="<%= @query %>" placeholder="Search the news" class="form-control border-right-0" aria-label="Query" />
+      <span class="input-group-append bg-white">
+        <button class="btn btn-outline-primary" id="search-submit" aria-label="Search">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  </form>
+</aside>
+
+<% if @links.present? %>
   <div id="links">
     <%= render "links", links: @links %>
   </div>
@@ -18,4 +31,6 @@
       <%= link_to_next_page @links, "Next Page", remote: true, class: "btn btn-primary", role: "button" %>
     </div>
   <% end %>
+<% elsif @query.present? %>
+  <p>No results found for "<strong><%= @query %></strong>".</p>
 <% end %>

@@ -21,6 +21,7 @@ $font-size-base: 1.1rem;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500");
 @import "bootstrap/scss/bootstrap";
+@import "font-awesome";
 
 body {
   min-height: 100vh;
@@ -93,6 +94,19 @@ hr {
     color: $text-muted;
     content: "* * *";
     letter-spacing: $spacer / 2;
+  }
+}
+
+.search {
+  .input-group {
+    box-shadow: 0px 3px 3px #1111;
+    .btn {
+      border-color: $input-border-color;
+      border-left-color: transparent;
+    }
+    .btn-outline-primary:hover {
+      border-color: $primary;
+    }
   }
 }
 

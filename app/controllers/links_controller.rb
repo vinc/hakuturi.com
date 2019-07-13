@@ -7,9 +7,11 @@ class LinksController < ApplicationController
   end
 
   def index
+    @query = params[:q].presence
     page = (params[:page] || "1").to_i
     limit = (params[:limit] || "10").to_i
-    @links = Link.all.order(created_at: :desc).page(page).per(limit)
+    scope = @query ? Link.basic_search(@query) : Link.all
+    @links = scope.order(created_at: :desc).page(page).per(limit)
   end
 
   def show

@@ -29,10 +29,12 @@ end
 
 gem "devise"
 gem "devise-bootstrap-views", "~> 1.0"
+gem "font-awesome-rails"
 gem "gepub"
 gem "kaminari"
 gem "meta-tags"
+gem "metainspector"
 gem "pundit"
 gem "redcarpet"
+gem "textacular", "~> 5.0"
 gem "webpacker"
-gem "metainspector"

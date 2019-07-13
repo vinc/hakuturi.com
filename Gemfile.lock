@@ -81,6 +81,8 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.1.5)
     ffi (1.11.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     gepub (1.0.4)
       nokogiri (>= 1.8.2, < 1.11)
       rubyzip (>= 1.1.1)
@@ -218,6 +220,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    textacular (5.1.0)
+      activerecord (>= 5.0, < 6.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -256,6 +260,7 @@ DEPENDENCIES
   byebug
   devise
   devise-bootstrap-views (~> 1.0)
+  font-awesome-rails
   gepub
   jbuilder (~> 2.5)
   kaminari
@@ -271,6 +276,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  textacular (~> 5.0)
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
