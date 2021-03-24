@@ -80,7 +80,7 @@ GEM
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.1.5)
-    ffi (1.11.1)
+    ffi (1.15.0)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     gepub (1.0.4)
@@ -107,10 +107,9 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
+    listen (3.5.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -180,8 +179,8 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (12.3.3)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-fsevent (0.10.4)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.0)
     responders (3.0.0)
@@ -195,7 +194,6 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
-    ruby_dep (1.5.0)
     rubyzip (1.2.3)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -258,7 +256,7 @@ DEPENDENCIES
   gepub
   jbuilder (~> 2.5)
   kaminari
-  listen (>= 3.0.5, < 3.2)
+  listen (>= 3.0.5, < 3.6)
   meta-tags
   metainspector
   pg (>= 0.18, < 2.0)
