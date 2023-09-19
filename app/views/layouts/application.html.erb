@@ -13,7 +13,7 @@
   <body class="d-flex flex-column <%= controller_name %>">
     <% if controller_name == "home" %>
       <header class="p-4 fullscreen d-flex flex-column text-white-90 text-shadow">
-        <%= video_tag("background-video.mp4", poster: "background-video.jpg", class: "background-video", playsinline: true, autoplay: true, muted: true, loop: true,) %>
+        <%= video_tag("background.mp4", poster: "background.jpg", class: "background-video", playsinline: true, autoplay: true, muted: true, loop: true,) %>
         <nav class="justify-self-start text-right flex-grow-1">
           <%= link_to "News", links_path %>
           <% if current_user&.admin? %>
@@ -27,7 +27,7 @@
       </header>
     <% else %>
       <header class="p-4 text-white-90 text-shadow">
-        <%= image_tag("background-video.jpg", class: "background-video") %>
+        <%= image_tag("background.jpg", class: "background-video") %>
         <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="text-center display-4 m-0">
           <%= content_for :header_title %>
         </ol>
